@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Fascinate+Inline|Baloo+Bhaina");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#board {
+	position: relative;
+	width: 100%;
+	min-width: 550px;
+}
+
+#messageArea {
+	width: 100%;
+	text-align: center;
+	margin-top: 5px;
+	color: #a7ec32;;
+	font-family: "Fascinate Inline";
+	font-size: 25px;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 3px;
+	margin: 0 auto;
+
+}
+
+#radarBg{
+  position: relative;
+  background-color: azure;
+   /* background: url('https://image1.masterfile.com/getImage/NzAwLTAwMDEwNDk0ZW4uMDAwMDAwMDA=AOAP1p/700-00010494en_Masterfile.jpg') no-repeat center center; */
+    background-size: cover;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.084);
+}
+
+td {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	border: 2px solid #a7ec32;
+	border-radius: 15px;
+}
+
+td:hover {
+	background: #b2b775;
+}
+
+td div {
+ 	width: 70px;
+	height: 70px;
+ }
+
+.numbers, .letters {
+	text-align: center;
+	font-size: 20px;
+	font-family: "Baloo Bhaina";
+	color: #6B8F2D;
+	height: 40px;
+	width: 40px;
+	border: none;
+}
+
+
+
+ @keyframes wave {
+  0% {transform: rotate(-7deg)}
+  100% {transform: rotate(5deg)}
+}
+
+
+
+
+.miss {
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  border-radius: 5px;
+  background: #000;
+  transform-origin: center center;
+  transform: rotate(45deg);
+  box-shadow: 3px 3px #a7ec32;
+  animation: blow 0.5s ease-in;
+  
+}
+
+@keyframes blow {
+  0% {transform: scale(0);}
+  1% {transform: rotate(45deg);}
+  80% {transform: scale(1.7);}
+  100% {transform: scale(1);}
+}
+
+.miss::after {
+  content: '';
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: #000;
+  transform: rotate(90deg);
+  box-shadow: 3px -3px #a7ec32;
+}
+
+
+.ship {
+	background: url('https://cdn-icons-png.flaticon.com/512/2315/2315740.png') no-repeat center center;
+	background-size: cover;
+}
+
+.guess-input {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #a7ec32;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #6B8F2D;
+}
